@@ -114,70 +114,77 @@
 # en az bir noktalama işareti içerecek
 # en az bir rakam içerecek
 # burakBurak1?burak
-from string import punctuation
-password = input('Type Strong Password: ')
-if len(password) < 16:
-    print('Invalid password..!')
-if not any(c.isupper() for c in password):
-    print('Invalid password')
-if not any(c.islower() for c in password):
-    print('Invalid password')
-if not any(c.isdigit() for c in password):
-    print('Invalid password')
-if not any(c in punctuation for c in password):
-    print('Invalid password')
-print('Valid password')
+# from string import punctuation
+# password = input('Type Strong Password: ')
+# if len(password) < 16:
+#     print('Invalid password..!')
+# if not any(c.isupper() for c in password):
+#     print('Invalid password')
+# if not any(c.islower() for c in password):
+#     print('Invalid password')
+# if not any(c.isdigit() for c in password):
+#     print('Invalid password')
+# if not any(c in punctuation for c in password):
+#     print('Invalid password')
+# print('Valid password')
+#
+# # list comprehansion
+# liste = [i for i in range(10)]
+# print(liste)
+#
+# print([i ** 2 for i in range(10)])
+#
+# print([i for i in range(0 ,100) if i % 2 == 0])
+#
+# print([i + j for i in range(1, 11) for j in range(1, 11)])
+#
+# print([[i + j for j in range(5)] for i in range(5)])
+#
+# boxer = ['mike', 'ali']
+# print([item for item in boxer if item.__contains__('m')])
+#
+# # any: koleksiyonda ki bütün elemanların her hangi biri true ise true döner
+# lst = [1, 2, None, 3, 4]
+# print(all(lst))
+#
+# first_name: str | None = 'burak'
+#
+# number: list[int | None | str | list] = [x > 0 for x in range(-5, -1)]
+# number.append(None)
+# print(number)
+# result = any(number)
+# print(result)
+#
+# # filter: koleksiyonlarda filtreleme işlemi yapar.
+# # lambda isimsiz bir fonksiyon yaratır. lst listesinin her bir elemanı adım adım x üzerinden işleme alınır.
+# lst = [11, 2, -10, 3, 4, -1]
+# sonuc = list(filter(lambda x: x > 0, lst))
+# print(sonuc)
+#
+# boxers = ['mike', 'ali', 'lenox']
+# result = list(filter(lambda x: x.__contains__('a'), boxers))
+# print(result)
+#
+#
+# arabalar = ['honda', 'handa', 'dodge', 'toyota', 'ford']
+# sonuc = sorted(arabalar, key=lambda x: x[0])
+# print(sonuc)
+#
+# # map fonksiyonu bir isimsiz loop yaratır listenin her bir elemanı için str dönüştürme işlemi aşağıda yaptı.
+# years = [i for i in range(1923, 2026)]
+# print(years)
+# str_years = list(map(str, years))
+# print(str_years)
 
-# list comprehansion
-liste = [i for i in range(10)]
-print(liste)
 
-print([i ** 2 for i in range(10)])
+from random import randint
 
-print([i for i in range(0 ,100) if i % 2 == 0])
+lst = []
+for i in range(10):
+    lst.append(randint(0, 100))
 
-print([i + j for i in range(1, 11) for j in range(1, 11)])
-
-print([[i + j for j in range(5)] for i in range(5)])
-
-boxer = ['mike', 'ali']
-print([item for item in boxer if item.__contains__('m')])
-
-# any: koleksiyonda ki bütün elemanların her hangi biri true ise true döner
-lst = [1, 2, None, 3, 4]
-print(all(lst))
-
-first_name: str | None = 'burak'
-
-number: list[int | None | str | list] = [x > 0 for x in range(-5, -1)]
-number.append(None)
-print(number)
-result = any(number)
-print(result)
-
-# filter: koleksiyonlarda filtreleme işlemi yapar.
-# lambda isimsiz bir fonksiyon yaratır. lst listesinin her bir elemanı adım adım x üzerinden işleme alınır.
-lst = [11, 2, -10, 3, 4, -1]
-sonuc = list(filter(lambda x: x > 0, lst))
-print(sonuc)
-
-boxers = ['mike', 'ali', 'lenox']
-result = list(filter(lambda x: x.__contains__('a'), boxers))
-print(result)
-
-
-arabalar = ['honda', 'handa', 'dodge', 'toyota', 'ford']
-sonuc = sorted(arabalar, key=lambda x: x[0])
-print(sonuc)
-
-# map fonksiyonu bir isimsiz loop yaratır listenin her bir elemanı için str dönüştürme işlemi aşağıda yaptı.
-years = [i for i in range(1923, 2026)]
-print(years)
-str_years = list(map(str, years))
-print(str_years)
-
-# tuple
-# dictionary
+for index, value in enumerate(lst):
+    print(f'Index: {index} - Value: {value}')
 
 
 
